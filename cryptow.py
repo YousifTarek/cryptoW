@@ -6,7 +6,7 @@ choice = input("here are the choices:\n 1.encrypt a file \n 2.decrypt a file \n"
 if int(choice) == 1:
 
      file = input('name of the target file: ')
-     file_key = input('the name of the key file')
+     file_key = input('the name of the key file:')
      key = Fernet.generate_key()
 
      with open(file_key,'wb'): #create the file if it doesn't exist
@@ -43,3 +43,5 @@ else:
         decrypted =  f.decrypt(encrypted.read())
      with open(file,"wb") as final:
           final.write(decrypted)
+
+# made by Yousif Tarek 
